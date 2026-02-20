@@ -41,8 +41,8 @@ def run_schedule():
         time.sleep(1)
 
 # Запуск планировщика
-#schedule.every().day.at("22:00").do(send_topic)
-schedule.every().minute.do(send_topic)  # тестовая отправка КАЖДУЮ МИНУТУ
+schedule.every().day.at("22:00").do(send_topic)
+#schedule.every().minute.do(send_topic)  # тестовая отправка КАЖДУЮ МИНУТУ
 thread = threading.Thread(target=run_schedule)
 thread.start()
 
